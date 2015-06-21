@@ -1,4 +1,5 @@
 Nomster2::Application.configure do
+  config.action_mailer.default_url_options = { :host => 'nomster2-jeff-powers.herokuapp.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -26,8 +27,8 @@ Nomster2::Application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  # DO fallback to assets pipeline if a precompiled asset is missed.
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
