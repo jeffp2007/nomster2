@@ -114,3 +114,13 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.photos {
+  max-width:100%;
+  border: #808080 1px solid;
+}
+
+.photo-border{
+  padding: 20px;
+  margin-bottom: 40px;
+}
