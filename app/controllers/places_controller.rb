@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@places = Place.all.paginate(:page => params[:page], :per_page => 5)
+		@places = Place.all.order(:updated_at).reverse_order.paginate(:page => params[:page], :per_page => 5)
 	end
 
 
